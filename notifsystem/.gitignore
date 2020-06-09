@@ -1,0 +1,14 @@
+# Python
+*.pyc
+
+# PyCharm
+.idea
+
+# osx noise
+.DS_Store
+
+# compass
+.sass-cache
+
+# node modules
+node_modules

@@ -1,0 +1,143 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+<title>jQuery AlertView Plugin Examples</title>
+<!-- AlertView begin -->
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<link rel="stylesheet" type="text/css" href="dist/alert_view.css"/>
+<script type="text/javascript" src="dist/alert_view.min.js"></script>
+<!-- AlertView end -->
+<link rel="stylesheet" type="text/css" href="site/bootstrap.min.css"/>
+<link rel="stylesheet" type="text/css" href="site/site.css"/>
+<script type="text/javascript" src="site/site.js"></script>
+<link href="http://www.jqueryscript.net/css/jquerysctipttop.css" rel="stylesheet" type="text/css">
+</head>
+<!--
+         _    _           _    __     ___
+        / \  | | ___ _ __| |_  \ \   / (_) _____      __
+       / _ \ | |/ _ \ '__| __|  \ \ / /| |/ _ \ \ /\ / /
+      / ___ \| |  __/ |  | |_    \ V / | |  __/\ V  V /
+     /_/   \_\_|\___|_|   \__|    \_/  |_|\___| \_/\_/
+-->
+<body>
+<div id="jquery-script-menu">
+<div class="jquery-script-center">
+<ul>
+<li><a href="http://www.jqueryscript.net/other/Lightweight-jQuery-Notification-Alert-Message-Plugin-AlertView.html">Download This Plugin</a></li>
+<li><a href="http://www.jqueryscript.net/">Back To jQueryScript.Net</a></li>
+</ul>
+<div class="jquery-script-ads"><script type="text/javascript"><!--
+google_ad_client = "ca-pub-2783044520727903";
+/* jQuery_demo */
+google_ad_slot = "2780937993";
+google_ad_width = 728;
+google_ad_height = 90;
+//-->
+</script>
+<script type="text/javascript"
+src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script></div>
+<div class="jquery-script-clear"></div>
+</div>
+</div>
+<!-- nav bar --><!-- content container -->
+<div class="cs_content_background" style="margin-top:150px;">
+<div class="container">
+<div class="alert_view_center offset1 span10"></div>
+
+<!-- menu -->
+<div class="span3">
+<ul class="nav nav-tabs nav-stacked affix span3 menu">
+<li><a class="center_msg" href="/center#">Alert message</a></li>
+<li><a class="center_error_msg" href="/center_error#">Alert error message</a></li>
+<li><a class="center_black_msg" href="/center_black#">Alert black message</a></li>
+<li><a clafss="right_msg" href="/right#">Notification message</a></li>
+<li><a class="right_error_msg" href="/right_error#">Notification error message</a></li>
+<li><a class="right_black_msg" href="/right_black#">Notification black message</a></li>
+</ul>
+</div>
+
+<!-- content -->
+<div class="offset3 span9" style="min-height: 400px;">
+<p>AlertView is a jQuery plugin that provides alerting message. That are like OS X notification window, and Twitter alert message.</p>
+AlertView provides two modes. <strong>Notification mode</strong> is like OS X notification window. <strong>Alert mode</strong> is like Twitter alert message.
+<legend>Include jQuery and AlertView</legend>
+<pre>
+&lt;script type="text/javascript" src="/jquery/2.0.3/jquery.min.js"&gt;&lt;/script&gt;
+&lt;link rel="stylesheet" type="text/css" href="/alert_view.css"/&gt;
+&lt;script type="text/javascript" src="/alert_view.min.js"&gt;&lt;/script&gt;</pre>
+<legend>Alert mode</legend>
+You should add a <code>.alert_view_center</code> element in body, AlertView will be showed in that.
+<pre>
+&lt;div class="container"&gt;
+    &lt;div class="alert_view_center offset1 span10"&gt;&lt;/div&gt;
+    ......</pre>
+<pre>
+$.av.pop({
+    mode: 'alert',
+    title: 'Title',
+    message: 'AlertView is an alert division ....'
+});
+
+// black template
+$.av.pop({
+    mode: 'alert',
+    template: 'black',
+    title: 'Title',
+    message: 'AlertView is an alert division ....'
+});
+
+// error template and not auto hide
+$.av.pop({
+    mode: 'alert',
+    template: 'error',
+    expire: 0,
+    title: 'Title',
+    message: 'AlertView is an alert division ....'
+});</pre>
+<legend>Notification mode</legend>
+<pre>
+$.av.pop({
+    title: 'Title',
+    message: 'AlertView is an alert division ....'
+});
+
+// black template and hide after two seconds
+$.av.pop({
+    template: 'black',
+    expire: 2000,
+    title: 'Title',
+    message: 'AlertView is an alert division ....'
+});</pre>
+<legend>Close AlertView</legend>
+<pre>
+var aid = $.av.pop({
+        title: 'Title',
+        message: 'Alert View is an alert division ....'});
+$.av.hide(aid);</pre>
+</div>
+</div>
+</div>
+
+<!-- footer -->
+<div class="cs_footer">
+<p> &copy; 2013 <a href="https://github.com/kelp404" target="_blank" rel="tooltip nofollow" title="Kelp on GitHub">Kelp</a>. </p>
+</div>
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-36251023-1']);
+  _gaq.push(['_setDomainName', 'jqueryscript.net']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+</body>
+</html>
